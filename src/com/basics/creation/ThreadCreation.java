@@ -1,8 +1,8 @@
 package com.basics.creation;
 
 /**
- * Thread creation extending Thread.
- * 
+ * @class ThreadTypes
+ * @brief This class explains the different types of thread creation in java.
  * @author pradeep
  *
  */
@@ -12,6 +12,7 @@ public class ThreadCreation extends Thread {
 	public void run() {
 		for (int i = 0; i < 10; i++) {
 			try {
+				System.out.println("Entering run() with Thread : " + Thread.currentThread());
 				System.out.println(Thread.currentThread().getName());
 				Thread.sleep(120);
 				System.out.println("Count : " + i);
@@ -36,7 +37,7 @@ public class ThreadCreation extends Thread {
 		new Thread(() -> {
 			for (int i = 0; i < 10; i++) {
 				try {
-					System.out.println(Thread.currentThread().getName());
+					System.out.println("Entering run() with Thread name : " + Thread.currentThread());
 					Thread.sleep(120);
 					System.out.println("Count : " + i);
 				} catch (InterruptedException e) {

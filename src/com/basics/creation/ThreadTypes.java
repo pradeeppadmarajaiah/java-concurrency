@@ -1,12 +1,18 @@
 package com.basics.creation;
 
 /**
- * 
+ * @class ThreadTypes
+ * @brief This class explains the different types of threads in java.
  * @author pradeep
  *
  */
 public class ThreadTypes {
 
+	/**
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
 	public static void main(String[] args) throws InterruptedException {
 
 		Thread userThread = new Thread(() -> {
